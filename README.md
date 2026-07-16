@@ -2,7 +2,6 @@
 
 Repo name: laa-criminal-applications-testing
 
-
 ## Tools
 
 Scripts
@@ -18,4 +17,3 @@ To run: `pnpm eslint`
 ### TypeScript
 
 Do not upgrade to TypeScript 7 - this will break the ESLint configuration.
->>>>>>> ae2345d (Add Readme)
