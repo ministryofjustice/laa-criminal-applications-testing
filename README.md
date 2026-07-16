@@ -23,7 +23,7 @@ Use ESLint to find coding issues.
 
 To use:
 - Create any required `.ts` files
-Run ESLint to detect errors: `pnpm eslint`
+- Run ESLint to detect errors: `pnpm eslint`
 
 
 ## Important notes
