@@ -1,9 +1,6 @@
 # Crime Apply and Review Test Automation
 
-<<<<<<< HEAD
 Repo name: laa-criminal-applications-testing
-=======
->>>>>>> ae2345d (Add Readme)
 
 ## Tools
 

@@ -1,0 +1,6 @@
+.github
+node_modules
+package.json
+playwright.config.ts
+pnpm-lock.yaml
+pnpm-workspace.yaml
