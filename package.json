@@ -1,7 +1,7 @@
 {
   "name": "laa-criminal-applications-testing",
   "version": "1.0.0",
-  "description": "",
+  "description": "MoJ LAA Digital Crime Apply and Review test automation suite",
   "main": "index.js",
   "scripts": {
     "pretest": "tsc --noEmit && eslint",
