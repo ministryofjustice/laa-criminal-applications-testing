@@ -1,5 +1,7 @@
-.github
-node_modules
+.features-gen
+node_modules/
+playwright-report/
+test-results/
 package.json
 playwright.config.ts
 pnpm-lock.yaml

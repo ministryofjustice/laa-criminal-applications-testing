@@ -1,5 +1,5 @@
 {
-    "bracketSpacking": true,
+    "bracketSpacing": true,
     "objectWrap": "preserve",
     "semi": true,
     "tabWidth": 2,
