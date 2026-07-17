@@ -5,10 +5,18 @@
   "main": "index.js",
   "scripts": {
     "pretest": "tsc --noEmit && eslint",
-    "test": "playwright test"
+    "test": "playwright test",
+    "report": "pnpx allure generate && pnpx allure serve"
+  },
+  "bugs": {
+    "url": "https://github.com/ministryofjustice/laa-criminal-applications-testing/issues"
   },
   "keywords": [],
-  "author": "Steven Lau",
+  "author": {
+   "name": "Steven Lau",
+   "email": "steven.lau@justice.gov.uk",
+   "url": "https://www.stevenlau.net"
+  },
   "license": "ISC",
   "devEngines": {
     "packageManager": {
@@ -22,6 +30,7 @@
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.0.1",
+    "allure-playwright": "^3.10.2",
     "eslint": "10.6.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-playwright": "^2.10.5",
