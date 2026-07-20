@@ -9,8 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v5
+    - uses: actions/setup-node@v5
+      with:
+        node-version: '24.x'
     - name: Install modules
-      run: yarn
+      run: npm install -g pnpm && pnpm install
     - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx
+      run: pnpm exec eslint . --ext .js,.jsx,.ts,.tsx
