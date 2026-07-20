@@ -33,7 +33,6 @@ To use:
 - Create any required `.ts` files
 - Run ESLint to detect errors: `pnpm eslint`
 
-
 ## Important notes
 
 ### TypeScript
