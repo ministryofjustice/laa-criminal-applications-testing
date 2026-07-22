@@ -1,5 +1,6 @@
 .DS_Store
 .features-gen/
+allure-report/
 allure-results/
 node_modules/
 playwright-report/
