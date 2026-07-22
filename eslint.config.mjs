@@ -15,6 +15,7 @@ export default defineConfig({
     rules: {
         "@typescript-eslint/no-floating-promises": "error",
         "@typescript-eslint/await-thenable": "error",
+        "playwright/no-standalone-expect": "off", // turning off since we are using Playwright-BDD
     },
     languageOptions: {
         parserOptions: {

@@ -1,4 +1,3 @@
-import { request } from '@playwright/test';
 import { ContactSchema } from '../schemas/contact.schema.ts';
 import { ApiTestContext, expect } from './fixtures.ts';
 import { When, Then } from './fixtures.ts';
