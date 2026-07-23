@@ -5,19 +5,42 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js jobs
+        uses: actions/setup-node@v7
+        with:
+          node-version: 27
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Run ESLint
+        run: pnpm eslint
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v5
+
     - uses: actions/setup-node@v5
       with:
         node-version: '24.x'
+
     - name: Install dependencies
       run: npm install -g pnpm && pnpm install
+
     - name: Install Playwright Browsers
       run: pnpm exec playwright install --with-deps
+
     - name: Generate Playwright tests from feature files
       run: pnpm bddgen
+
     - name: Run Playwright tests
       run: pnpm exec playwright test
