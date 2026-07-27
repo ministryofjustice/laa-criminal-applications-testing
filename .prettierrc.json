@@ -1,8 +1,9 @@
 {
-    "bracketSpacing": true,
-    "objectWrap": "preserve",
-    "semi": true,
-    "tabWidth": 2,
-    "trailingComma": "all",
-    "useTabs": false
+  "bracketSpacing": true,
+  "objectWrap": "preserve",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false
 }
