@@ -3,6 +3,7 @@ import { expect, test } from './fixtures.ts';
 
 When('I navigate to the website', async ({ cvPage }) => {
   await cvPage.goto();
+  // check url
 });
 
 Then('I should see the title', async ({ cvPage }) => {

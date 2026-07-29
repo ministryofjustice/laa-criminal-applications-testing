@@ -4,7 +4,8 @@ import { test } from './fixtures.ts';
 
 const { Given, When, Then } = createBdd(test);
 
-Given('the following subtraction cases:',
+Given(
+  'the following subtraction cases:',
   async ({ calculationCases }, dataTable: DataTable) => {
     const rows = dataTable.hashes();
 
@@ -18,16 +19,12 @@ Given('the following subtraction cases:',
   },
 );
 
-When(
-  'each subtraction is calculated',
-  async ({ calculationCases }) => {
-    for (const calculationCase of calculationCases) {
-      calculationCase.actualResult =
-        calculationCase.firstNumber -
-        calculationCase.secondNumber;
-    }
-  },
-);
+When('each subtraction is calculated', async ({ calculationCases }) => {
+  for (const calculationCase of calculationCases) {
+    calculationCase.actualResult =
+      calculationCase.firstNumber - calculationCase.secondNumber;
+  }
+});
 
 Then(
   'every calculated result should equal the expected result',
