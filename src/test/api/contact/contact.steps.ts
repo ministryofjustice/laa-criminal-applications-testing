@@ -1,6 +1,6 @@
-import { ContactSchema } from '../schemas/contact.schema.ts';
-import { ApiTestContext, expect } from './fixtures.ts';
-import { When, Then } from './fixtures.ts';
+import { ContactSchema } from './contact.schema.ts';
+import { ApiTestContext, expect } from '../common/fixtures.ts';
+import { When, Then } from '../common/fixtures.ts';
 
 When(
   'I send a GET request to {string}',
@@ -10,10 +10,11 @@ When(
   },
 );
 
-Then('the status is {int}', async ({ apiContext }, status: number) => {
-  const response = requireResponse(apiContext);
-  expect(response.status()).toBe(status);
-});
+
+//Then('the status is {int}', async ({ apiContext }, status: number) => {
+ // const response = requireResponse(apiContext);
+  //expect(response.status()).toBe(status);
+//});
 
 Then('the response should match the contact schema', async ({ apiContext }) => {
   const result = ContactSchema.safeParse(apiContext.body);

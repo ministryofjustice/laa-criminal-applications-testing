@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import { createBdd, DataTable } from 'playwright-bdd';
-import { test } from './fixtures.ts';
+import { test } from '../common/fixtures.ts';
 
 const { Given, When, Then } = createBdd(test);
 

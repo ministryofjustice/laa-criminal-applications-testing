@@ -2,6 +2,7 @@
   "compilerOptions": {
     "paths": {
       "@pages/*": ["./src/test/ui/desktop/pages/*"],
+      "@components/*": ["./src/test/ui/desktop/components/*"]
     },
     "allowImportingTsExtensions": true,
     "esModuleInterop": true,
@@ -18,5 +19,8 @@
     "types": ["node"]
   },
   "exclude": ["node_modules"],
-  "include": ["src/test/**/*.ts"]
+  "include": [
+    "src/test/**/*.ts",
+    "src/test/ui/desktop/features/placeholder.feature"
+  ]
 }
