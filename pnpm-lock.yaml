@@ -227,8 +227,8 @@ importers:
         specifier: ^26.0.1
         version: 26.0.1
       allure-playwright:
-        specifier: ^3.10.2
-        version: 3.10.2(@playwright/test@1.61.1)
+        specifier: ^3.11.1
+        version: 3.11.1(@playwright/test@1.61.1)
       eslint:
         specifier: 10.6.0
         version: 10.6.0
@@ -450,16 +450,16 @@ packages:
   ajv@6.15.0:
     resolution: {integrity: sha512-fgFx7Hfoq60ytK2c7DhnF8jIvzYgOMxfugjLOSMHjLIPgenqa7S7oaagATUq99mV6IYvN2tRmC0wnTYX6iPbMw==}
 
-  allure-js-commons@3.10.2:
-    resolution: {integrity: sha512-5nAjUF1iNPSQMwKtEsadclSta8C3L705/k/pIzGb9M6P9krgfRaCyaEHt8pkLlCP9NFj5xk3grjtnAhiLeT+Kg==}
+  allure-js-commons@3.11.1:
+    resolution: {integrity: sha512-3B4kdlf2aBS43dwUlPKG2rwWgfWAFA2bWyzz57IXvkQr9cXFZFQXRDlImDkXOOfmgjSE0j/qGKfdIy6T+vqgFg==}
     peerDependencies:
-      allure-playwright: 3.10.2
+      allure-playwright: 3.11.1
     peerDependenciesMeta:
       allure-playwright:
         optional: true
 
-  allure-playwright@3.10.2:
-    resolution: {integrity: sha512-CGyhxSvx2bIkojhBy0pbQZ12vkLbOE3FBh39WgzPs+katwnuGPUE0whJhryG8aD/dlDALxMehL9G0k8WYBx4tQ==}
+  allure-playwright@3.11.1:
+    resolution: {integrity: sha512-OGtHMrpOJ5GMLWkFtNqHruLkXW2EhrNsapWe/5/+jSxNj4lOS5OUL3dxkPY06t/2VgoNtUl+bb8bM/CyMuhu2A==}
     peerDependencies:
       '@playwright/test': '>=1.53.0'
 
@@ -1072,16 +1072,16 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  allure-js-commons@3.10.2(allure-playwright@3.10.2(@playwright/test@1.61.1)):
+  allure-js-commons@3.11.1(allure-playwright@3.11.1(@playwright/test@1.61.1)):
     dependencies:
       md5: 2.3.0
     optionalDependencies:
-      allure-playwright: 3.10.2(@playwright/test@1.61.1)
+      allure-playwright: 3.11.1(@playwright/test@1.61.1)
 
-  allure-playwright@3.10.2(@playwright/test@1.61.1):
+  allure-playwright@3.11.1(@playwright/test@1.61.1):
     dependencies:
       '@playwright/test': 1.61.1
-      allure-js-commons: 3.10.2(allure-playwright@3.10.2(@playwright/test@1.61.1))
+      allure-js-commons: 3.11.1(allure-playwright@3.11.1(@playwright/test@1.61.1))
 
   ansi-regex@5.0.1: {}
 
