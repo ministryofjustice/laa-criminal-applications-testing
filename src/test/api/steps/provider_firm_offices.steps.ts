@@ -1,22 +1,124 @@
-import { ApiTestContext } from '../fixtures/api-test-context.ts';
-import { Given, When, Then, expect } from '../fixtures/fixtures.ts';
+/*
+import { ApiTestContext } from '../fixtures/api.fixture';
+import { Given, When, Then } from '../fixtures/api.fixture';
+import { test } from '../fixtures/api.fixture';
 import dotenv from 'dotenv';
-import { env } from '../../../config/env.ts';
+import { envSchema } from '../../config/env.schema';
+import { ApiRequestBuilder } from '@api/clients/ApiRequestBuilder';
+import { ApiClient } from '@api/clients/ApiClient';
+import { env } from '../../config/environment';
+import { ProviderFirmOfficesEndpoints } from '@api/endpoints/provider_firm_offices.endpoints';
+import { ProviderFirmOfficesService } from '@api/services/ProviderFirmOfficesService';
+*/
+import { Given, When, Then } from '../fixtures/api.fixture.ts';
+import dotenv from 'dotenv';
+import { expect } from '../fixtures/api.fixture.ts';
 
 dotenv.config({
   path: `.env.${process.env.STAGING_ENV ?? 'STAGING'}`,
 })
 
-Given('I do not have valid API access keys', async ({}) => {
-  //
-});
+When('I make a DELETE request for office information with office number {int}', 
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
 
-When(
-  'I make a provider firm offices GET request for getting office information',
-  async ({ request, apiContext }) => {
-    //apiContext.response = await request.get(`${env.providerFirmOfficesUrl}`)
-    apiContext.response = await request.get('https://jsonplaceholder.typicode.com/todos/1')
-    apiContext.body = await apiContext.response.json();
+    apiContext.response = await providerFirmOfficesService.deleteProviderFirmOffice(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
   },
 );
 
+When('I make a GET request for office information with office number {int}', 
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+
+    apiContext.response = await providerFirmOfficesService.getProviderFirmOffice(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
+
+When('I make a text\\/plain GET request for office information with office number {int}', 
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+
+    apiContext.response = await providerFirmOfficesService.acceptTextPlainGetTextPlainProviderFirmOffice(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
+
+When('I make a PATCH request for office information with office number {int}', 
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+
+    apiContext.response = await providerFirmOfficesService.patchProviderFirmOffice(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
+
+When('I make a POST request for office information with office number {int}', 
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+
+    apiContext.response = await providerFirmOfficesService.postProviderFirmOffice(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
+
+When('I make a PUT request for office information with office number {int}', 
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+
+    apiContext.response = await providerFirmOfficesService.putProviderFirmOffice(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
+
+When('I make a GET request for provider office schedule with office number {int}',
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+    apiContext.response = await providerFirmOfficesService.getSchedules(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
+
+When('I make a DELETE request for office provider schedule information with office number {int}',
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+    apiContext.response = await providerFirmOfficesService.deleteSchedules(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
+
+When('I make a PATCH request for office provider schedule information with office number {int}',
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+    apiContext.response = await providerFirmOfficesService.patchSchedules(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
+
+When('I make a POST request for office provider schedule information with office number {int}',
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+    apiContext.response = await providerFirmOfficesService.postSchedules(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
+
+When('I make a PUT request for office provider schedule information with office number {int}',
+  async ({ providerFirmOfficesService, apiContext }, officeAccountNumber: number) => {
+    apiContext.response = await providerFirmOfficesService.putSchedules(
+      officeAccountNumber,
+      apiContext.authToken,
+    );
+  },
+);
