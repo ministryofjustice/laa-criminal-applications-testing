@@ -1,6 +1,7 @@
-import { ContactSchema } from './contact.schema.ts';
-import { ApiTestContext, expect } from '../common/fixtures.ts';
-import { When, Then } from '../common/fixtures.ts';
+import { ContactSchema } from '../schemas/contact.schema.ts';
+import { expect } from '../fixtures/fixtures.ts';
+import { When, Then } from '../fixtures/fixtures.ts';
+import { ApiTestContext } from '../fixtures/api-test-context.ts';
 
 When(
   'I send a GET request to {string}',

@@ -18,5 +18,7 @@ function required(name: string): string {
 
 export const env = {
     environment,
+    baseUrl: required('API_BASE_URL'),
     providerFirmOfficesUrl: required('PROVIDER_FIRM_OFFICES_URL'),
+    providerFirmsEndpointsUrl: required('PROVIDER_FIRMS_ENDPOINTS_URL'),
 };

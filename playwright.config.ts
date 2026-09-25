@@ -17,11 +17,11 @@ import dotenv from 'dotenv';
 
 const testDir = defineBddConfig ({
   features: [
-    'src/test/api/**/*.feature',
-    'src/test/ui/desktop/features/*.feature'
+    'src/test/api/features/*.feature',
+    'src/test/ui/features/*.feature',
   ],
   steps: [
-    'src/test/api/**/*.ts',
+    'src/test/api/steps/*.ts',
     'src/test/ui/desktop/steps/*.ts'
   ]
 });

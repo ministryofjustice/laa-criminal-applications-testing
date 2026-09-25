@@ -1,5 +1,5 @@
-import { ApiTestContext, expect } from './fixtures.ts';
-import { When, Then } from './fixtures.ts';
+import { ApiTestContext } from '../fixtures/api-test-context.ts';
+import { When, Then, expect } from '../fixtures/fixtures.ts';
 
 Then('I will receive a 401 Unauthorized response', async ({ apiContext }) => {
   const response = requireResponse(apiContext);
